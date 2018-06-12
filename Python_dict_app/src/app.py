@@ -11,6 +11,8 @@ def find(search):
 
     if search in data.keys():
         return data[search]
+    elif search.title() in data:
+        return data[search.title()]
 
     elif len(get_close_matches(search,data.keys())) > 0:
         yn = "X"

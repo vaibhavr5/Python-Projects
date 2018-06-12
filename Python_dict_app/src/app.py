@@ -13,6 +13,8 @@ def find(search):
         return data[search]
     elif search.title() in data:
         return data[search.title()]
+    elif search.upper() in data:
+        return data[search.upper()]
 
     elif len(get_close_matches(search,data.keys())) > 0:
         yn = "X"
